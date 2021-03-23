@@ -105,6 +105,10 @@ button.cta-signup{
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
+.cta-signup:hover{
+    cursor: pointer;
+}
+
 .why-us{
     background: #4abebd;
     width: 50%;

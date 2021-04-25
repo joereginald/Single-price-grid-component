@@ -1,129 +1,155 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+html{
+    box-sizing: border-box ;
+    font-size: 100%;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
 }
 
 body{
-    font-family: 'Karla', sans-serif;
-    width: 100%;
-    font-size: 16px;
-    background: hsl(204, 43%, 93%);
-    /*
-    padding-top: 75px;
-    padding-left: 10%;
-    padding-right: 10%;
-    */
-    
-}
-
-main{
-    height: 50%;
-    width: 650px;
-   /*
-    
-    margin-left: 10%;
-    margin-right: 10%;
-    align-self: center;
-    
-    */
-    margin-top: 125px;
-    margin-bottom: 50px;
-    margin-left: auto;
-    margin-right: auto;
     line-height: 1.3;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    font-family: 'Karla', sans-serif;
+    background-color: var(--ltgray);
+    color: var(--grayblue);
+    padding: var(--paddingX);
 }
 
-.join-our-community{
-    background: #ffffff;
-    padding: 40px;
-    font-weight: 700;
-    border-radius: 10px 10px 0 0;
+:root{
+    --white : hsl(0, 0%, 100%);
+    --cyan: hsl(179, 62%, 43%);
+    --ltcyan: hsl(179, 62%, 45%);
+    --ltyellow : hsl(71, 73%, 54%);
+    --dkyellow : hsl(71, 73%, 48%);
+    --ltgray : hsl(204, 43%, 93%);
+    --grayblue : hsl(218, 22%, 67%);
+    --paddingX : 1.8rem;
+    --paddingY : 1.5rem;
 }
 
-.join-our-community h1{
-    color: hsl(179, 62%, 43%);
-    margin-bottom: 10px;
+a{
+    text-decoration: none;
 }
 
-.join-our-community h2{
-    color:hsl(71, 73%, 54%);
-    font-size: 20px;
-    margin-top: 20px;
-    margin-bottom: 10px;
+h1, h2, h3 {
+    font-weight: bold;
+    margin-top: 0;
+    line-height: 1.15;
 }
 
-.join-our-community p{
-    color: hsl(218, 22%, 67%);
-    opacity: 0.7;    
+h2{
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
 }
 
-.monthly-sub-why-us{
+h3{
+    font-size: 1.1rem;
+}
+
+p{
+    margin-top: 0;
+}
+
+.price{
+    border-radius: 0.5rem;
+    overflow: hidden;
+    max-width: 40rem;
+    margin: auto;
+}
+
+@media only screen and (min-width: 62.5rem){
+    .price{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+    }
+
+    .community{
+        grid-column: 1 / 3;
+    }
+}
+
+.price > * {
+    padding: var(--paddingX) var(--paddingY);
+}
+
+.community{
+    background-color: var(--white);
+}
+
+.community h2{
+    color: var(--cyan);
+}
+
+.community .subtitle{
+    font-size: 1rem;
+    color: var(--ltyellow);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.community p{
+    font-size: 0.85rem;
+    line-height: 1.75;
+    margin-bottom: 0;
+}
+
+.subscription, .why {
+    color: var(--ltgray);
+}
+
+.subscription {
+    background-color: var(--cyan);
+}
+
+.subscription__price {
     display: flex;
+    align-items: center;
+    
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
 }
 
-.monthly-sub{
-    background: hsl(179, 62%, 43%);
-    width: 50%;
-    padding: 30px;
-    color: hsl(204, 43%, 93%);
-    border-radius: 0 0 0 10px;
+.subscription__price span{
+    font-size: 1rem;
+    margin-left: 0.8rem;
+    font-weight: normal;
+    opacity: 0.9;
 }
 
-.monthly-sub h2{
-    font-size: 20px;
-    margin-bottom: 10px;
+.subscription p{
+    font-size: 0.9rem;
+    margin-bottom: 1.75rem;
 }
 
-.monthly-sub span.dollar-29{
-    font-size: 40px;
-    font-weight: 700;
+.subscription a{
+    display: block;
+    background-color: var(--ltyellow);
+    color: var(--white);
+    padding: 0.75rem;
+    text-align: center;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+    transition: background-color 200ms ease;
 }
 
-.monthly-sub span.per-month{
-    padding-bottom: 10px;
-    opacity: 0.8;
+.subscription a:hover{
+    background-color: var(--dkyellow);
 }
 
-.monthly-sub p{
-    margin-top: 10px;
-    margin-bottom: 30px;
-    font-weight: 700;
-    opacity: 0.8;
-    filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 12px) ;
+.why {
+    background-color: var(--ltcyan);
 }
 
-button{
-    width: 235px;
-    height: 50px;
-    color: hsl(204, 43%, 93%);
-    background: hsl(71, 73%, 54%);
-    border-style: none;
-    border-radius: 10px;
-    font-weight: 700;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    cursor: pointer;
+.why ul {
+    margin-top: 0;
+    padding: 0;
 }
 
-button:focus{
-    outline-style: none;
-}
 
-.why-us{
-    background: #4abebd;
-    width: 50%;
-    border-radius: 0 0 10px 0;
-    padding: 30px;
-    color: hsl(204, 43%, 93%);
-}
-
-.why-us h2{
-    font-size: 20px;
-    margin-bottom: 20px;
-    font-weight: 700;
-}
-
-.why-us p{
-    opacity: 0.8;
+.why ul li{
+    list-style-type: none;
+    font-size: 0.85rem;
+    margin-bottom: 0.2rem;
 }
